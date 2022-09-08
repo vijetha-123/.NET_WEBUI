@@ -1,0 +1,124 @@
+.header{
+    color:blue;
+    background-color: aqua;
+    text-align: center;
+    box-sizing: border-box;
+}
+.left{
+    float: left;
+    width: 30%;
+    height: 600px;
+    background-color:rgb(255, 232, 127);
+    border: 2px rgb(101, 51, 8);
+}
+.center{
+    float: left;
+    width: 40%;
+    height: 600px;
+    background-color:rgb(127, 150, 255);
+    border: 2px rgb(101, 51, 8);
+    
+}
+.right{
+    float: left;
+    width: 30%;
+    height: 600px;
+    background-color:rgb(255, 127, 234);
+    border: 2px rgb(101, 51, 8);
+    
+}
+.leftside{
+    list-style-type: none;
+    padding: 20px;
+    width: 20px;
+    height: 60px;
+    position: sticky;
+}
+.footer{
+    background-color: aqua;
+    padding: 20px;
+    text-align: center;
+    color: brown;
+   
+}
+li a.verticalnav{
+    display:block;
+    color:darkblue;
+    text-align: left;
+    padding: 5px 5px;
+    text-decoration: none;
+    font-size: larger;
+}
+.transition{
+    width:100px;
+    height:100px;
+    transition: width 2s,height 2s, transform 1s;
+}
+.transition:hover{
+    width:300px;
+    height:200px;
+    transform:rotate3d();
+}
+@media screen and (max-width:1000px) {
+    iframe{
+        height:80px;
+        width:80px;
+    }
+    li a.verticalnav{
+
+    display:block;
+    color:rgb(134, 0, 139);
+    text-align: left;
+    padding: 5px 5px;
+    text-decoration: none;
+    font-size: 18px;
+    }
+    
+    p{
+        font-size: 12px;
+    }
+    
+}
+@media screen and (max-width:800px){
+    iframe{
+        height:100px;
+        width:100px;
+    }
+    li a.verticalnav{
+
+    display:block;
+    color:rgb(160, 160, 217);
+    text-align: left;
+    padding: 5px 5px;
+    text-decoration: none;
+    font-size: 10px;
+    }
+    img{
+        display: none;
+    }
+    p{
+        font-size: 10px;
+    }
+}
+    @media screen and (max-width:600px){
+        iframe{
+            height:50px;
+            width:50px;
+        }
+        li a.verticalnav{
+    
+        display:block;
+        color:rgb(113, 139, 0);
+        text-align: left;
+        padding: 5px 5px;
+        text-decoration: none;
+        font-size: 8px;
+        }
+        img{
+            display: none;
+        }
+        p{
+            font-size: 8px;
+        }
+    
+}
