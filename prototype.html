@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype JS</title>
+</head>
+<body>
+    <script>
+        //funct
+        function course_details(){
+            //2 property
+            course_id=100;
+            course_name="dontnet";
+        }
+        var c=new course_details();
+        c.courseduration="120hrs";//3rd properrty
+        document.write(c.courseduration+"<br>");
+        var c1= new course_details();
+        document.write(c1.courseduration+"<br>");
+    </script>
+    <script>
+         //funct with prototype
+         function course_details(){
+            //2 property
+            course_id=100;
+            course_name="dontnet";
+        }
+        //3rd property created using prototype obj
+        course_details.prototype.courseduration="130hrs";
+        //instance
+        var c=new course_details();
+        document.write(c.courseduration+"<br>");
+        //create a func using protptype
+        course_details.prototype.display=function(){
+            return course_id+ " "+course_name;
+        }
+        var c2=new course_details();
+        document.write(c2.courseduration+"<br>");
+        document.write(c2.display());
+    </script>
+    <!--arrow func-->
+    <script>
+        //normal func
+        function display(){
+            document.write("welcm to normal funct");
+        }
+        //arr
+        let disp=()=>document.write("welcom to arrow");
+        let square=x=>document.write("welcom to arrow"+ (x*x));
+        let add=(y,z)=>document.write("welcom to arrow"+ (y+z));
+
+        //invoke functns
+        display();
+        disp();
+        square(2);
+        add(2,3);
+    </script>
+</body>
+</html>

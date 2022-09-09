@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <form action="">
+    <label>Department name:</label>
+    <input type="text" name="dept" value="" required>
+    <button type="submit" onclick="cal(this.form)">submit</button>
+    
+</form>
+<div>
+    <p id="choice"></p>
+</div>
+</div>
+    <script>
+        var salary=50000;
+        var bonus=0;
+        class department{
+            display(){
+                window.alert("enter department");
+            }
+        }
+        class IT extends department{
+            display(){
+                bonus=salary*(50/100);
+                window.alert("IT bonus: "+bonus);
+
+            }
+        }
+        class test extends department{
+            display(){
+                bonus=salary*(45/100);
+                window.alert("testing bonus: "+bonus);
+
+            }
+        }
+        class admin extends department{
+            display(){
+                bonus=salary*(30/100);
+                window.alert("Admin bonus: "+bonus);
+
+            }
+        }
+        class others extends department{
+            display(){
+                bonus=salary*(20/100);
+                window.alert("Others bonus: "+bonus);
+
+            }
+        }
+        function cal(form){
+            var dep=form.dept.value;
+            var a;
+            if(dep==""){
+                a=new department();
+            }
+            else if(dep=="IT"){
+                a=new IT();
+            }
+            else if(dep=="testing"){
+                a=new test();
+            }
+            else if(dep=="admin"){
+                a=new admin();
+            }
+            else{
+                a=new others();
+            }
+            msg=a.display();
+            document.getElementById("choice").innerHTML=msg;
+
+
+        }
+
+
+        var sal=500000;
+        var d="admin";
+         if(dep="IT"){
+                a=new IT();
+            }
+            else if(dep="testing"){
+                a=new test();
+            }
+            else if(dep="admin"){
+                a=new admin();
+            }
+            else{
+                a=new others();
+            }
+
+    </script>
+</body>
+</html>

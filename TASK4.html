@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT</title>
+</head>
+<body>
+    <div>
+    <h1 style="color: red; text-align:center; font-size: 50px;">Login to your Account</h1>
+    <form action="">
+        <fieldset style="margin-left: 400px;margin-right: 400px; border: radius 10px;text-align: center; background-color: rgba(65, 232, 207, 0.692);">
+            <label style=" font-family: 'Courier New', Courier, monospace; font-size: xx-large;">USERNAME</label><br>
+            <input type="text"  name="uname"  required>
+            <br>
+            <label style=" font-family: 'Courier New', Courier, monospace; font-size: xx-large;">PASSWORD</label><br>
+            <input type="password"  name="password"  required><br><br>
+            <button type="submit" onclick="processedData(this.form)">Sign In</button>
+        
+
+        </fieldset>
+    </form>
+    <div>
+        <p id="choice" style="text-align: center;"></p>
+    </div>
+</div>
+    <script>
+        
+        class valid{
+            display(){
+                window.alert( "Login Successful!");
+            }
+
+        }
+        class invalid extends valid{
+            display(){
+                window.alert("Invalid username and password!");
+            }
+        }
+        function processedData(form)
+        {
+            var user=form.uname.value;
+            var pass=form.password.value;
+            var a;
+            if(user=="Vijetha" && pass=="12345"){
+                a=new valid();
+            }
+            else{
+            a=new invalid();
+            }
+            msg=a.display();
+        document.getElementById("choice").innerHTML=msg;
+        }
+
+    </script>
+    
+</body>
+</html>
