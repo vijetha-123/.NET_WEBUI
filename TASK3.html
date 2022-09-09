@@ -10,10 +10,10 @@
     <script>
         var a=11;
         if(a%2==0){
-            document.write(a+" is even"+"<br>");
+            document.write(a+" is even"+"<br>"+"<hr>");
         }
         else{
-            document.write(a+" is odd"+"<br>");
+            document.write(a+" is odd"+"<br>"+"<hr>");
         }
         var b=10;
         var c=20;
@@ -28,9 +28,9 @@
         b=c; 
         c=temp;
         document.write(b+ " and "+c+" after swaping using third variable"+"<br>"+"<hr>");
-        document.write(b+" and "+c+" before swaping without using third variable"+"<br>");
+        document.write(b+" and "+c+" before swaping in one line"+"<br>");
         [b,c]=[c,b]
-        document.write(b+ " and "+c+" after swaping without using third variable"+"<br>"+"<hr>");
+        document.write(b+ " and "+c+" after swaping in one line"+"<br>"+"<hr>");
         var phy=80,chem=70,bio=86,maths=98,eng=91;
         var total=phy+chem+bio+maths+eng;
         document.write("total marks scored: "+total+"<br>");
@@ -49,6 +49,7 @@
             document.write("FAIL"+"<br>"+"<hr>");
         }
         var n=1234;
+        document.write("number to be reversed: "+n+"<br>");
         var rev=0;
         var rem;
         while(n!=0){
