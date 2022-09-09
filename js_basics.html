@@ -8,23 +8,48 @@
 </head>
 <body>
     <script>
-        var a="11";
+        var a=11;
         if(a%2==0){
             document.write(a+" is even"+"<br>");
         }
         else{
             document.write(a+" is odd"+"<br>");
         }
-        var b="20",c="10";
-        document.write(b+" and "+c+" before swaping without using third variable"+"<br>");{
+        var b=10;
+        var c=20;
+        var temp;
+        document.write(b+" and "+c+" before swaping without using third variable"+"<br>");
         b=b+c;
         c=b-c; 
-        document.write("c");
         b=b-c;
-        document.write(b+" before swaping without using third variable"+"<br>");
+        document.write(b+ " and "+c+" after swaping without using third variable"+"<br>"+"<hr>");
+        document.write(b+" and "+c+" before swaping using third variable"+"<br>");
+        temp=b;
+        b=c; 
+        c=temp;
+        document.write(b+ " and "+c+" after swaping using third variable"+"<br>"+"<hr>");
+        document.write(b+" and "+c+" before swaping without using third variable"+"<br>");
+        [b,c]=[c,b]
+        document.write(b+ " and "+c+" after swaping without using third variable"+"<br>"+"<hr>");
+        var phy=80,chem=70,bio=86,maths=98,eng=91;
+        var total=phy+chem+bio+maths+eng;
+        document.write("total marks scored: "+total+"<br>");
+        var per=(total/5);
+        document.write("Percentage :"+per+"<br>");
+        if(per>80){
+            document.write("grade A"+"<br>");
+        }
+        else if(per>60 && per<=80){
+            document.write("grade B"+"<br>");
+        }
+        else if(per>45 && per<=60){
+            document.write("grade C"+"<br>");
+        }
+        else{
+            document.write("FAIL"+"<br>");
         }
         
+        
     </script>
-    <input type="text" >
 </body>
 </html>
