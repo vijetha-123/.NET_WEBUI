@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABSTRACTION JS</title>
+</head>
+<body>
+    <script>
+        class Course{
+            constructor(){
+                if(this.constructor==Course){
+                    throw new Error("abstract class cannot be instatiatd");
+
+                }
+            }
+            course_details(){
+                throw new Error("abstract func cannot be instatiatd");
+            }
+    
+        }
+        class js extends Course{
+            course_details(){
+                console.log("js");
+            }
+        }
+        var j=new js();
+        j.course_details();
+    </script>
+</body>
+</html>

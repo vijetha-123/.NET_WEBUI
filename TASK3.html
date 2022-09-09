@@ -37,17 +37,34 @@
         var per=(total/5);
         document.write("Percentage :"+per+"<br>");
         if(per>80){
-            document.write("grade A"+"<br>");
+            document.write("grade A"+"<br>"+"<hr>");
         }
         else if(per>60 && per<=80){
-            document.write("grade B"+"<br>");
+            document.write("grade B"+"<br>"+"<hr>");
         }
         else if(per>45 && per<=60){
-            document.write("grade C"+"<br>");
+            document.write("grade C"+"<br>"+"<hr>");
         }
         else{
-            document.write("FAIL"+"<br>");
+            document.write("FAIL"+"<br>"+"<hr>");
         }
+        var n=1234;
+        var rev=0;
+        var rem;
+        while(n!=0){
+            rem=n % 10;
+            rev = rev * 10 + rem;
+            n =Math.floor(n/10);    
+        }
+        document.write("reversed number:" + rev+"<hr>");
+        var x=5;
+        var fact=1;
+        for(var i=1;i<=x;i++) {
+            fact=fact*i;
+            
+        }
+        document.write("factorial of "+x+" is: "+fact);
+
         
         
     </script>

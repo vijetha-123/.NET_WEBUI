@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POLYMORPHISM-COMPILE TIME</title>
+</head>
+<body>
+    <script>
+            function add(){
+                //decision making(if else)
+                if(arguments.length==0)//default func(no parameters)
+                {
+                    var x=10;
+                    console.log(x+x);
+
+                }
+                else if(arguments.length==2){
+                    console.log("overloaded");
+                }
+                else{
+                    var sum=0;
+                    var total_arg=arguments.length;
+                    for(var i=0;i<total_arg;i++){
+                        sum+=arguments[i];
+
+                    }
+                    console.log(sum);
+                }
+            }
+            add();//default func
+            add(10,30,20);
+    </script>
+</body>
+</html>
