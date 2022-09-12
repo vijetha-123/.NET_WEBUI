@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BOOTSTRAP</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/666f94f97d.js" crossorigin="anonymous"></script>
@@ -15,10 +15,20 @@
         color: rgb(186, 234, 223);
         text-align:right;
     }
+    @media screen and (max-width:800px) {
+      carousel-inner>img{
+        height: 400px;
+        width:50%;
+        display: none;
+      }
+      img{
+        display: none;
+      }
+    }
 </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" >
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -27,13 +37,13 @@
           <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Cart</a>
+                <a class="nav-link active" aria-current="page" href="#">Cart <span class="badge bg-secondary">4</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Wishlist</a>
+                <a class="nav-link" href="#">Wishlist <span class="badge bg-secondary">10</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Profile</a>
+                <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Profile </a>
               </li>
             </ul>
             <form class="d-flex">
@@ -82,6 +92,9 @@
         </button>
       </div>
       <br>
+      <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Congratulation,you have earned 1 new scratch card!</h4>
+      </div>
       <ul class="nav nav-pills nav-fill">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Home
@@ -93,14 +106,17 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Explore</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Notification</a>
+        <li class="nav-item ">
+          <a class="nav-link " href="#">Notification</a>
         </li>
       </ul>
       <br>
+      <hr>
+      
       <h3 style="text-align: center; font-family: cursive;">New Trendings!</h3>
       <br>
       <br>
+      <div class="container">
       <div class="row">
         <div class="col col-3 img-fluid">
       <div class="card" style="width: 18rem;">
@@ -143,9 +159,11 @@
         </div>
       </div>
 </div>
+      </div>
 <br>
 <br>
-<br>
+<br><hr>
+<div class="container-fluid">
 <h3 style="text-align: center; font-family: cursive;">Recently viewed stores</h3>
 <table class="table table-hover table-striped table-bordered table-condensed">
     <thead>
@@ -181,5 +199,11 @@
       </tr>
     </tbody>
   </table>
+</div>
+<nav class="navbar fixed-bottom navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">&copy;www.shopify.com</a>
+  </div>
+</nav>
 </body>
 </html>
